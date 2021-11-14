@@ -20,11 +20,13 @@ const AddUser = (props) => {
     console.log(enteredUsername);
     console.log(enteredAge);
     console.log(enteredName);
+    props.onAddUser(enteredName, enteredUsername,enteredAge)
 
     //reset the form
     setenteredUsername('');
     setenteredAge('');
     setEnteredName('');
+
   };
   const nameChangeHandler = (event) => {
         setEnteredName(event.target.value);
